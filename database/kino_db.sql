@@ -1,7 +1,7 @@
 CREATE DATABASE kino_db;
 USE kino_db;
 
--- Tabla de Usuarios
+-- Tabla de Usuario
 CREATE TABLE usuarios (
     usuario_id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
