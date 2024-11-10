@@ -9,8 +9,8 @@ CREATE TABLE usuarios (
     fecha_nacimiento DATE,
     telefono VARCHAR(15),
     email VARCHAR(100) UNIQUE NOT NULL,
-    contrasena VARCHAR(255) NOT NULL
-);
+    contrasena VARCHAR(255) NOT NULL,
+    rol ENUM('cliente', 'administrador') DEFAULT 'cliente' 
 
 -- Tabla de Películas
 CREATE TABLE peliculas (
@@ -65,3 +65,7 @@ CREATE TABLE asientos_reservados (
     FOREIGN KEY (reserva_id) REFERENCES reservas(reserva_id),
     FOREIGN KEY (asiento_id) REFERENCES asientos(asiento_id)
 );
+
+-- Usuario administrador por defecto admin 12345
+INSERT INTO usuarios (nombre, apellido, fecha_nacimiento, telefono, email, contrasena, rol)
+VALUES ('Admin', 'User', '1970-01-01', '123456789', 'admin@kino.com', '$2y$10$Kt8NVc.lR5KnxI8I5zmj7OZRfJHdd6k0Jp9FJfMfLqNEfjWv1Wvzu', 'administrador');

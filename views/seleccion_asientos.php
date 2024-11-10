@@ -1,14 +1,12 @@
-<?php include('../templates/header.php'); ?>
-<?php include('../templates/sidebar.php');
-include('../includes/db_connection.php'); ?>
+<header class="header-cine">
+    <h2>Reserva de Asientos</h2>
+</header>
 
 <div class="main-content">
     <div class="asientos-container">
-        <h2>Reserva de Asientos</h2>
-        
         <div class="leyenda">
             <div class="item-leyenda">
-                <div class="asiento reservado"></div>
+                <div class="asiento ocupado"></div>
                 <p>Reservado</p>
             </div>
             <div class="item-leyenda">
@@ -20,6 +18,10 @@ include('../includes/db_connection.php'); ?>
                 <p>Seleccionado</p>
             </div>
         </div>
+
+
+<!-- Indicador de Pantalla -->
+<div class="pantalla-indicador">Pantalla</div>
 
         <div class="sala">
             <div class="fila-letra">A</div>
@@ -45,12 +47,12 @@ include('../includes/db_connection.php'); ?>
             <div class="asiento ocupado" data-fila="D" data-numero="2">D2</div>
             <div class="asiento" data-fila="D" data-numero="3">D3</div>
             <div class="asiento" data-fila="D" data-numero="4">D4</div>
-        </div>
-        
-        <button id="continuar">Continuar</button>
-    </div>
+            </div>
+
+<button id="continuar">Continuar</button>
+</div>
 </div>
 
-<?php include('../templates/footer.php'); ?>
+
 <script src="../assets/js/seleccion_asientos.js"></script>
-<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/styles.css">

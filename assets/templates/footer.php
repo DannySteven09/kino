@@ -1,6 +1,10 @@
+<?php
+echo "Footer cargado correctamente";
+?>
+
 <footer>
-        <p>Cine Kino © 2024. Todos los derechos reservados</p>
-    </footer>
-    
+    <p>Cine Kino © 2024. Todos los derechos reservados</p>
+</footer>
+
 </body>
 </html>
