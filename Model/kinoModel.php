@@ -26,7 +26,7 @@ class kinoModel
 
 ?>
             <script>
-                window.location.href = '../views/index.html';
+                window.location.href = '../index.html';
             </script>
 <?php
 
