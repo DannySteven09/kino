@@ -1,5 +1,5 @@
 <?php
-echo "Header cargado correctamente";
+
 ?>
 
 <!DOCTYPE html>

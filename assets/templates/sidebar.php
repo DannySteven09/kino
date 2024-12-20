@@ -1,7 +1,7 @@
 <aside class="sidebar">
     <nav class="sidebar-nav">
         <ul>
-            <li><a href="index.php">Inicio</a></li>
+            <li><a href="index.html">Inicio</a></li>
             <li><a href="cartelera.php">Cartelera</a></li>
             <li><a href="gestion.php">Gestión de Películas</a></li>
             <li><a href="confirmacion_reserva.php">Confirmación de Reservas</a></li>

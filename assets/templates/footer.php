@@ -1,5 +1,5 @@
 <?php
-echo "Footer cargado correctamente";
+
 ?>
 
 <footer>
