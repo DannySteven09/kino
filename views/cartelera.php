@@ -1,3 +1,8 @@
+<?php
+require_once('../includes/db_connection.php');
+require_once('../Model/kinoModel.php');
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,46 +10,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cartelera - Cine Kino</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
     <header class="header-cine">
         <h1>Cartelera de Películas</h1>
     </header>
 
-    <div class="cartelera-container">
-        <div class="fila-peliculas">
-            <!-- Película 1: Avatar 2 -->
-            <div class="pelicula">
-                <img src="../img/peliculas/avatar.jpg" alt="Avatar 2">
-                <div class="info-pelicula">
-                    <h3>Avatar 2</h3>
-                    <button class="btn-reservar" onclick="reservarPelicula()">Reservar</button>
-                    <button class="btn-detalle" onclick="toggleDetalle('detalle-avatar')">Ver Detalles</button>
-                </div>
-                <div id="detalle-avatar" class="detalle-pelicula" style="display: none;">
-                    <p><strong>Sinopsis:</strong> Un épico viaje a Pandora.</p>
-                    <p><strong>Clasificación:</strong> TP</p>
-                    <p><strong>Duración:</strong> 150 minutos</p>
-                    <p><strong>Precio:</strong> 2500 colones</p>
-                </div>
-            </div>
-            
-            <!-- Película 2: The Batman -->
-            <div class="pelicula">
-                <img src="../img/peliculas/batman.jpg" alt="The Batman">
-                <div class="info-pelicula">
-                    <h3>The Batman</h3>
-                    <button class="btn-reservar" onclick="reservarPelicula()">Reservar</button>
-                    <button class="btn-detalle" onclick="toggleDetalle('detalle-batman')">Ver Detalles</button>
-                </div>
-                <div id="detalle-batman" class="detalle-pelicula" style="display: none;">
-                    <p><strong>Sinopsis:</strong> Una historia oscura del Caballero de la Noche.</p>
-                    <p><strong>Clasificación:</strong> M16</p>
-                    <p><strong>Duración:</strong> 180 minutos</p>
-                    <p><strong>Precio:</strong> 2500 colones</p>
-                </div>
-            </div>
-        </div>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Cartelera de Películas</h2>
+        <?php kinoModel::mostrarPeliculas(); ?>
     </div>
 
     <footer>
@@ -61,5 +36,7 @@
             detalle.style.display = detalle.style.display === 'none' ? 'block' : 'none';
         }
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
